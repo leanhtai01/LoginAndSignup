@@ -15,6 +15,13 @@ namespace LoginAndSignup
         public FormSignup()
         {
             InitializeComponent();
+
+            buttonCancel.Click += ButtonCancel_Click;
+        }
+
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

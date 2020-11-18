@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonOK = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.labelDateOfBirth = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxDateOfBirth = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelDateOfBirth = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -69,91 +69,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(346, 327);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.buttonCancel, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.buttonOK, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 57);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // buttonOK
-            // 
-            this.buttonOK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonOK.Location = new System.Drawing.Point(31, 10);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(111, 37);
-            this.buttonOK.TabIndex = 0;
-            this.buttonOK.Text = "OK";
-            this.buttonOK.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancel.Location = new System.Drawing.Point(204, 10);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(111, 37);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
-            // labelDateOfBirth
-            // 
-            this.labelDateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelDateOfBirth.AutoSize = true;
-            this.labelDateOfBirth.Location = new System.Drawing.Point(30, 232);
-            this.labelDateOfBirth.Name = "labelDateOfBirth";
-            this.labelDateOfBirth.Size = new System.Drawing.Size(68, 13);
-            this.labelDateOfBirth.TabIndex = 5;
-            this.labelDateOfBirth.Text = "Date of birth:";
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(63, 179);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(35, 13);
-            this.labelEmail.TabIndex = 4;
-            this.labelEmail.Text = "Email:";
-            // 
-            // labelName
-            // 
-            this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(60, 126);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(38, 13);
-            this.labelName.TabIndex = 3;
-            this.labelName.Text = "Name:";
-            // 
-            // labelUsername
-            // 
-            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(40, 20);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(58, 13);
-            this.labelUsername.TabIndex = 0;
-            this.labelUsername.Text = "Username:";
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(42, 73);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(56, 13);
-            this.labelPassword.TabIndex = 2;
-            this.labelPassword.Text = "Password:";
             // 
             // tableLayoutPanel1
             // 
@@ -186,18 +101,10 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(346, 266);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxUsername.Location = new System.Drawing.Point(104, 16);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(211, 20);
-            this.textBoxUsername.TabIndex = 1;
-            // 
             // textBoxDateOfBirth
             // 
             this.textBoxDateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxDateOfBirth.Location = new System.Drawing.Point(104, 229);
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(105, 229);
             this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
             this.textBoxDateOfBirth.Size = new System.Drawing.Size(211, 20);
             this.textBoxDateOfBirth.TabIndex = 9;
@@ -205,7 +112,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxEmail.Location = new System.Drawing.Point(104, 175);
+            this.textBoxEmail.Location = new System.Drawing.Point(105, 175);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(211, 20);
             this.textBoxEmail.TabIndex = 8;
@@ -213,7 +120,7 @@
             // textBoxName
             // 
             this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxName.Location = new System.Drawing.Point(104, 122);
+            this.textBoxName.Location = new System.Drawing.Point(105, 122);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(211, 20);
             this.textBoxName.TabIndex = 7;
@@ -221,10 +128,103 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxPassword.Location = new System.Drawing.Point(104, 69);
+            this.textBoxPassword.Location = new System.Drawing.Point(105, 69);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(211, 20);
             this.textBoxPassword.TabIndex = 6;
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(43, 73);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(56, 13);
+            this.labelPassword.TabIndex = 2;
+            this.labelPassword.Text = "Password:";
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(41, 20);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(58, 13);
+            this.labelUsername.TabIndex = 0;
+            this.labelUsername.Text = "Username:";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxUsername.Location = new System.Drawing.Point(105, 16);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(211, 20);
+            this.textBoxUsername.TabIndex = 1;
+            // 
+            // labelName
+            // 
+            this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(61, 126);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(38, 13);
+            this.labelName.TabIndex = 3;
+            this.labelName.Text = "Name:";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(64, 179);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(35, 13);
+            this.labelEmail.TabIndex = 4;
+            this.labelEmail.Text = "Email:";
+            // 
+            // labelDateOfBirth
+            // 
+            this.labelDateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelDateOfBirth.AutoSize = true;
+            this.labelDateOfBirth.Location = new System.Drawing.Point(31, 232);
+            this.labelDateOfBirth.Name = "labelDateOfBirth";
+            this.labelDateOfBirth.Size = new System.Drawing.Size(68, 13);
+            this.labelDateOfBirth.TabIndex = 5;
+            this.labelDateOfBirth.Text = "Date of birth:";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.buttonCancel, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonOK, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 57);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancel.Location = new System.Drawing.Point(204, 10);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(111, 37);
+            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            // 
+            // buttonOK
+            // 
+            this.buttonOK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonOK.Location = new System.Drawing.Point(31, 10);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(111, 37);
+            this.buttonOK.TabIndex = 0;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
             // 
             // FormSignup
             // 
@@ -233,14 +233,15 @@
             this.ClientSize = new System.Drawing.Size(346, 327);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormSignup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

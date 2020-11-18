@@ -15,6 +15,15 @@ namespace LoginAndSignup
         public FormLogin()
         {
             InitializeComponent();
+
+            buttonSignup.Click += ButtonSignup_Click;
+        }
+
+        private void ButtonSignup_Click(object sender, EventArgs e)
+        {
+            FormSignup formSignup = new FormSignup();
+
+            formSignup.Show();
         }
     }
 }
