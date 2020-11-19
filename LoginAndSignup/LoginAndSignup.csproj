@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLBH.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ValidationInput.cs" />
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
