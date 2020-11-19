@@ -20,16 +20,60 @@ namespace LoginAndSignup
 
             errorProvider = new ErrorProvider();
 
+            AcceptButton = buttonOK;
+
             buttonCancel.Click += ButtonCancel_Click;
             buttonOK.Click += ButtonOK_Click;
-            textBoxUsername.Leave += TextBoxUsername_Leave;
-            textBoxPassword.Leave += TextBoxPassword_Leave;
-            textBoxName.Leave += TextBoxName_Leave;
-            textBoxEmail.Leave += TextBoxEmail_Leave;
-            textBoxDateOfBirth.Leave += TextBoxDateOfBirth_Leave;
+            textBoxUsername.Validating += TextBoxUsername_Validating;
+            textBoxUsername.Validated += TextBoxUsername_Validated;
+            textBoxPassword.Validating += TextBoxPassword_Validating;
+            textBoxPassword.Validated += TextBoxPassword_Validated;
+            textBoxName.Validating += TextBoxName_Validating;
+            textBoxName.Validated += TextBoxName_Validated;
+            textBoxEmail.Validating += TextBoxEmail_Validating;
+            textBoxEmail.Validated += TextBoxEmail_Validated;
+            textBoxDateOfBirth.Validating += TextBoxDateOfBirth_Validating;
+            textBoxDateOfBirth.Validated += TextBoxDateOfBirth_Validated;
         }
 
-        private void TextBoxDateOfBirth_Leave(object sender, EventArgs e)
+        private void TextBoxDateOfBirth_Validated(object sender, EventArgs e)
+        {
+            errorProvider.SetError(textBoxDateOfBirth, "");
+        }
+
+        private void TextBoxEmail_Validated(object sender, EventArgs e)
+        {
+            errorProvider.SetError(textBoxEmail, "");
+        }
+
+        private void TextBoxName_Validated(object sender, EventArgs e)
+        {
+            errorProvider.SetError(textBoxName, "");
+        }
+
+        private void TextBoxPassword_Validated(object sender, EventArgs e)
+        {
+            errorProvider.SetError(textBoxPassword, "");
+        }
+
+        private void TextBoxUsername_Validated(object sender, EventArgs e)
+        {
+            errorProvider.SetError(textBoxUsername, "");
+        }
+
+        private void TextBoxValidate(TextBox textBox, string pattern, string errorMessage, CancelEventArgs e)
+        {
+            ValidationInput validation = new ValidationInput();
+
+            if (!validation.IsValid(textBox.Text, pattern))
+            {
+                e.Cancel = true;
+                textBox.Select(0, textBox.Text.Length);
+                errorProvider.SetError(textBox, errorMessage);
+            }
+        }
+
+        private void TextBoxDateOfBirth_Validating(object sender, CancelEventArgs e)
         {
             DateTime dateTime;
 
@@ -37,83 +81,43 @@ namespace LoginAndSignup
                 System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None, out dateTime))
             {
+                e.Cancel = true;
+                textBoxDateOfBirth.Select(0, textBoxDateOfBirth.Text.Length);
                 errorProvider.SetError(textBoxDateOfBirth, "Ngày không hợp lệ!");
-                buttonOK.Enabled = false;
-            }
-            else
-            {
-                errorProvider.SetError(textBoxDateOfBirth, "");
-                buttonOK.Enabled = true;
             }
         }
 
-        private void TextBoxEmail_Leave(object sender, EventArgs e)
+        private void TextBoxEmail_Validating(object sender, CancelEventArgs e)
         {
-            ValidationInput validation = new ValidationInput();
             string pattern = @"^(([a-z]+(([a-z]|[0-9]|[.])+)?)[@][a-z]+[.][a-z]+)$";
+            string errorMessage = "Email không hợp lệ. Vui lòng nhập lại.";
 
-            if (!validation.IsValid(textBoxEmail.Text, pattern))
-            {
-                errorProvider.SetError(textBoxEmail, "Email không hợp lệ. Vui lòng nhập lại.");
-                buttonOK.Enabled = false;
-            }
-            else
-            {
-                errorProvider.SetError(textBoxEmail, "");
-                buttonOK.Enabled = true;
-            }
+            TextBoxValidate(textBoxEmail, pattern, errorMessage, e);
         }
 
-        private void TextBoxName_Leave(object sender, EventArgs e)
+        private void TextBoxName_Validating(object sender, CancelEventArgs e)
         {
-            ValidationInput validation = new ValidationInput();
             string pattern = @"^[a-zA-Z\s]+[0-9]*?$";
+            string errorMessage = "Name không được bắt đầu bằng ký số";
 
-            if (!validation.IsValid(textBoxName.Text, pattern))
-            {
-                errorProvider.SetError(textBoxName, "Name không được bắt đầu bằng ký số");
-                buttonOK.Enabled = false;
-            }
-            else
-            {
-                errorProvider.SetError(textBoxName, "");
-                buttonOK.Enabled = true;
-            }
+            TextBoxValidate(textBoxName, pattern, errorMessage, e);
         }
 
-        private void TextBoxPassword_Leave(object sender, EventArgs e)
+        private void TextBoxPassword_Validating(object sender, CancelEventArgs e)
         {
-            ValidationInput validation = new ValidationInput();
             string pattern = @"^[\S]{3,}$";
+            string errorMessage = "Password phải có ít nhất 3 ký tự và không có khoảng trắng";
 
-            if (!validation.IsValid(textBoxPassword.Text, pattern))
-            {
-                errorProvider.SetError(textBoxPassword, "Password phải có ít nhất 3 ký tự và không có khoảng trắng");
-                buttonOK.Enabled = false;
-            }
-            else
-            {
-                errorProvider.SetError(textBoxPassword, "");
-                buttonOK.Enabled = true;
-            }
+            TextBoxValidate(textBoxPassword, pattern, errorMessage, e);
         }
 
-        private void TextBoxUsername_Leave(object sender, EventArgs e)
+        private void TextBoxUsername_Validating(object sender, CancelEventArgs e)
         {
-            ValidationInput validation = new ValidationInput();
             string pattern = @"^([a-z]+(([a-z]|[0-9])+)?)$";
+            string errorMessage = "Username phải duy nhất, ko có ký tự HOA, bắt đầu bởi ký tự a-z," +
+                " không khoảng trắng và các ký tự đặc biệt(chỉ gồm a - z, 0 - 9)";
 
-            if (!validation.IsValid(textBoxUsername.Text, pattern))
-            {
-                errorProvider.SetError(textBoxUsername, "Username phải duy nhất, ko có ký tự HOA, bắt đầu bởi ký tự a-z," +
-                    " không khoảng trắng và các ký tự đặc biệt(chỉ gồm a - z, 0 - 9)");
-                buttonOK.Enabled = false;
-            }
-            else
-            {
-                errorProvider.SetError(textBoxUsername, "");
-                buttonOK.Enabled = true;
-            }
+            TextBoxValidate(textBoxUsername, pattern, errorMessage, e);
         }
 
         private void ButtonOK_Click(object sender, EventArgs e)

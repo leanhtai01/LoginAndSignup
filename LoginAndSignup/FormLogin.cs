@@ -16,6 +16,8 @@ namespace LoginAndSignup
         {
             InitializeComponent();
 
+            AcceptButton = buttonLogin;
+
             buttonSignup.Click += ButtonSignup_Click;
             buttonLogin.Click += ButtonLogin_Click;
         }
