@@ -35,8 +35,8 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonSignup = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonSignup = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -96,6 +96,7 @@
             this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxPassword.Location = new System.Drawing.Point(83, 46);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(201, 20);
             this.textBoxPassword.TabIndex = 3;
             // 
@@ -133,16 +134,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(299, 49);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // buttonSignup
-            // 
-            this.buttonSignup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSignup.Location = new System.Drawing.Point(20, 8);
-            this.buttonSignup.Name = "buttonSignup";
-            this.buttonSignup.Size = new System.Drawing.Size(108, 32);
-            this.buttonSignup.TabIndex = 0;
-            this.buttonSignup.Text = "Signup";
-            this.buttonSignup.UseVisualStyleBackColor = true;
-            // 
             // buttonLogin
             // 
             this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -152,6 +143,16 @@
             this.buttonLogin.TabIndex = 1;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            // 
+            // buttonSignup
+            // 
+            this.buttonSignup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSignup.Location = new System.Drawing.Point(20, 8);
+            this.buttonSignup.Name = "buttonSignup";
+            this.buttonSignup.Size = new System.Drawing.Size(108, 32);
+            this.buttonSignup.TabIndex = 0;
+            this.buttonSignup.Text = "Signup";
+            this.buttonSignup.UseVisualStyleBackColor = true;
             // 
             // FormLogin
             // 

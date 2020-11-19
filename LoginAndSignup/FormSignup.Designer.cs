@@ -130,6 +130,7 @@
             this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxPassword.Location = new System.Drawing.Point(105, 69);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(211, 20);
             this.textBoxPassword.TabIndex = 6;
             // 
