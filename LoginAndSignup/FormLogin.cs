@@ -50,7 +50,7 @@ namespace LoginAndSignup
         {
             FormSignup formSignup = new FormSignup();
 
-            formSignup.Show();
+            formSignup.ShowDialog();
         }
     }
 }
