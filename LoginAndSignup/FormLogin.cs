@@ -17,6 +17,33 @@ namespace LoginAndSignup
             InitializeComponent();
 
             buttonSignup.Click += ButtonSignup_Click;
+            buttonLogin.Click += ButtonLogin_Click;
+        }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            using (var db = new QLBHDataContext())
+            {
+                var user = db.Users.SingleOrDefault(u => u.f_Username.Equals(textBoxUsername.Text));
+
+                if (user != null)
+                {
+                    EncryptPassword encryptPw = new EncryptPassword();
+
+                    if (encryptPw.IsPasswordValid(textBoxPassword.Text, user.f_Password))
+                    {
+                        MessageBox.Show("Logged in successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login failed!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Login failed!");
+                }
+            }
         }
 
         private void ButtonSignup_Click(object sender, EventArgs e)
