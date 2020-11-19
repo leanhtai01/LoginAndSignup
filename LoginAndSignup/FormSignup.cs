@@ -17,10 +17,12 @@ namespace LoginAndSignup
         public FormSignup()
         {
             InitializeComponent();
+            SetupForm();
 
             errorProvider = new ErrorProvider();
 
             AcceptButton = buttonOK;
+            splitContainer1.IsSplitterFixed = true;
 
             buttonCancel.Click += ButtonCancel_Click;
             buttonOK.Click += ButtonOK_Click;
@@ -34,6 +36,13 @@ namespace LoginAndSignup
             textBoxEmail.Validated += TextBoxEmail_Validated;
             textBoxDateOfBirth.Validating += TextBoxDateOfBirth_Validating;
             textBoxDateOfBirth.Validated += TextBoxDateOfBirth_Validated;
+        }
+
+        private void SetupForm()
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void TextBoxDateOfBirth_Validated(object sender, EventArgs e)

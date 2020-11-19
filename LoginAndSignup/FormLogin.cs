@@ -15,11 +15,20 @@ namespace LoginAndSignup
         public FormLogin()
         {
             InitializeComponent();
+            SetupForm();
 
             AcceptButton = buttonLogin;
+            splitContainer1.IsSplitterFixed = true;
 
             buttonSignup.Click += ButtonSignup_Click;
             buttonLogin.Click += ButtonLogin_Click;
+        }
+
+        private void SetupForm()
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void ButtonLogin_Click(object sender, EventArgs e)
